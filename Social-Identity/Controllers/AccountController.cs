@@ -57,8 +57,9 @@ namespace Social_Identity.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+            LoginViewModel login = new LoginViewModel();
             ViewBag.ReturnUrl = returnUrl;
-            return View();
+            return View(login);
         }
 
         //
@@ -139,7 +140,8 @@ namespace Social_Identity.Controllers
         [AllowAnonymous]
         public ActionResult Register()
         {
-            return View();
+            RegisterViewModel register = new RegisterViewModel();
+            return View(register);
         }
 
         //
@@ -190,7 +192,8 @@ namespace Social_Identity.Controllers
         [AllowAnonymous]
         public ActionResult ForgotPassword()
         {
-            return View();
+            ForgotPasswordViewModel forgotPassword = new ForgotPasswordViewModel();
+            return View(forgotPassword);
         }
 
         //
